@@ -33,3 +33,4 @@ The following is a screenshot of the wireframe, highlighting the website's propo
 - Moe:
 - Lauren:
 - Olivia: (TBD on return to class 11/16)
+- Tanner: demo how branches work on Github
