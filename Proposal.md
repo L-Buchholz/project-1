@@ -9,12 +9,12 @@ The planner will use MomentJS or a similar library to incorporate date and time.
 ## User Story
 
 ```md
-AS A programmer with upcoming projects
-I WANT an online program to manage them based on the timeframe it will take to complete each component (planning, coding, etc.)
+AS A programmer with upcoming projects,
+I WANT an online program to manage them based on the timeframe it will take to complete each component (planning, coding, etc.),
 SO THAT I can deliver my finished projects on-time.
 ```
 
-## API's
+## Proposed API's
 
 1. Validator.pizza -- This application verifies email addresses for user contact and accounts: https://www.validator.pizza/
 
@@ -24,12 +24,16 @@ SO THAT I can deliver my finished projects on-time.
 
 The following is a screenshot of the wireframe, highlighting the website's proposed appearance and functionality:
 
-![This is an image based on the proposed website. It includes: a header and nav bar; a website background image/logo/icon; cards for the designated project planners; and a footer with contact info. Courtesy of Collin Kerr](./assets/images/Wireframe1-UProjekt.jpg)
+![This is an image based on the proposed website. It includes: a header and nav bar; a placeholder for a website logo/icon/background image; interactive cards for the designated project planner templates; and a footer with contact info. Courtesy of Collin Kerr](./assets/images/Wireframe1-UProjekt.jpg)
 
 ## (Rough) breakdown of tasks:
 
 - Aaron:
+
 - Collin: Awesome mock-up
+
+- Lauren: Project proposal/Git repo coordinator
+
 - Moe:
-- Lauren:
+
 - Olivia: (TBD on return to class 11/16)
