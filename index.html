@@ -61,11 +61,16 @@
     </div> -->
   </header>
 
-  <main>
-    <div id= "main-image">
-      <img class= "justify-content-center" src="./assets/images/Project Management.png" alt="">
+  <main class="d-flex">
+    <section class="side-block-left flex-column flex-start side-block">
+        <h4>Tasks</h4>
+    </section>
+    <section class="flex-center center">
+    <div>
+      <img class= "center" src="./assets/images/Project Management.png" alt="">
     </div>
-    <div class="row row-cols-1 row-cols-md-4 mb-3 text-center justify-content-center">
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 text-center justify-content-center">
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm">
           <div class="card-header py-3">
@@ -75,7 +80,7 @@
             <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>No suggested timeline</li>
-              <li>Complete control over phases</li>
+              <li>Complete control over</li>
               <li>Interactive task list</li>
               <li>Auto-populated calendar</li>
             </ul>
@@ -84,8 +89,8 @@
         </div>
       </div>
       <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-header py-3">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 border-primary">
             <h4 class="my-0 fw-normal">Typical</h4>
           </div>
           <div class="card-body">
@@ -101,8 +106,8 @@
         </div>
       </div>
       <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm border-primary">
-          <div class="card-header py-3 text-white bg-primary border-primary">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
             <h4 class="my-0 fw-normal">Advanced</h4>
           </div>
           <div class="card-body">
@@ -113,11 +118,15 @@
               <li>Interactive task list</li>
               <li>Auto-populated calendar</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-primary">Start My Project</button>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Start My Project</button>
           </div>
         </div>
       </div>
     </div>
+  </section>
+  <section class="side-block-right flex-column flex-end side-block">
+    <h4>This Week</h4>
+</section>
   </main>
 
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
