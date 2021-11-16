@@ -28,12 +28,4 @@ The following is a screenshot of the wireframe, highlighting the website's propo
 
 ## (Rough) breakdown of tasks:
 
-- Aaron:
-
-- Collin: Awesome mock-up
-
-- Lauren: Project proposal and Git repo coordinator
-
-- Moe:
-
-- Olivia: (TBD on return to class 11/16)
+Our plan is to work on the project collectively, starting with establishing the CSS framework and then building in the Javascript functionality.
