@@ -1,6 +1,6 @@
-#main-image {
-height: 80%;
-width: 80%;
-margin-bottom: 2%;
-display: flex;
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
