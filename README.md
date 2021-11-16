@@ -29,8 +29,11 @@ The following is a screenshot of the wireframe, highlighting the website's propo
 ## (Rough) breakdown of tasks:
 
 - Aaron:
+
 - Collin: Awesome mock-up
+
 - Moe:
-- Lauren:
+
+- Lauren: Project proposal and Git repo coordinator
+
 - Olivia: (TBD on return to class 11/16)
-- Tanner: demo how branches work on Github

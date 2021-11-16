@@ -32,7 +32,7 @@ The following is a screenshot of the wireframe, highlighting the website's propo
 
 - Collin: Awesome mock-up
 
-- Lauren: Project proposal/Git repo coordinator
+- Lauren: Project proposal and Git repo coordinator
 
 - Moe:
 
