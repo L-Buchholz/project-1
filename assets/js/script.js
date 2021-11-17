@@ -1,13 +1,13 @@
-//Variables for the following functions
+//CALENDAR JAVASCRIPT
+//Variables
 
 var today = moment();
 var dayWeek = today.format("dddd");
 var monthDay = today.format("MMM Do");
 $("#currentDay").text("Today is " + dayWeek + ", " + monthDay);
 
-//Establishes current day
+/*For body header*/
 var day = today.day();
-//var hour = moment().hour();
 
 //FUNCTIONS
 
@@ -31,67 +31,61 @@ var holidays = function () {
         console.log(today1);
 
         if (today1 === date) {
-          console.log("This matches!");
+          //console.log("This is a holiday!")
+          $(textArea).val("Public holiday");
         } else {
-          console.log("why you not here?");
+          //console.log("Not a holiday");
+          $(textArea).val("Not a holiday");
         }
       }
     });
 };
 holidays();
 
-//$("#currentWeek").text("Week of " + )
+/*Body header: Sets dates for the current week AND current date, 
+both incorporating days of the week*/
+/*MomentJs: day(1) = Monday, day(7) = following Sunday (based on
+  Sunday (index 0) -- Saturday (index 6) week*/
+var weekStart = moment().day(1).format("MMM Do");
+var weekEnd = moment().day(7).format("MMM Do");
+$("#currentWeek").text(
+  "Week of Monday, " + weekStart + ", " + " to Sunday, " + weekEnd
+);
 
-/*for (var calendarWeek = 1; calendarWeek < 8; calendarWeek++) {
-  var monthWeekday = today.format("MMM Do")
-  if (monthWeekday = 1)
-}
-  var currentWeek
-)
-*/
-
-//for (var calendarHour = #; calendarHour < #; calendarHour++)
+/*Establishes calendar week as a Monday -- Sunday loop*/
 for (var calendarDay = 1; calendarDay < 8; calendarDay++) {
-  //var currentHour = $("#" + calendarHour);
   var currentDay = $("#" + calendarDay);
-  //if (hour == calendarHour)
   if (day == calendarDay) {
-    //currentHour.addClass("present");
     currentDay.addClass("present");
-    //else if (hour > calendarHour)
   } else if (day > calendarDay) {
-    //currentHour.addClass("past");
     currentDay.addClass("past");
   } else {
-    //currentHour.addClass("future");
     currentDay.addClass("future");
   }
-
-  //Follows functions defined below; here calendarDay points at the item stored by dayId
-  //var textArea = $(currentHour).find("textarea");
+  /*Saves user-generated text to calendar text areas 
+  (here calendarDay points at the value stored by dayId, 
+  which is defined below)*/
   var textArea = $(currentDay).find("textarea");
-  //var savedValue = localStorage.getItem(calendarHour);
   var savedValue = localStorage.getItem(calendarDay);
-  //$(textArea).val(savedValue);
   $(textArea).val(savedValue);
 }
 
-//EVENT LISTENERS (Allows "save" button to save items to localStorage)
+//EVENT LISTENERS
+/*Enable "save" buttons to save items to localStorage)*/
 $(".row").on("click", saveHandler);
-//Function designates click event by row (instead of applying to all of them)
+/*Function designates click event by row (instead of applying to all of them)*/
 function saveHandler(event) {
-  //Selects a specific row element (not yet defined)
-  //var calendarRow = event.currentTarget;
-  var calen;
-  //Selects "id" element to dictate what hour the event handler applies to (i.e., which row)
-  var hourId = calendarRow.getAttribute("id");
-  //Selects the associated button for a given calendar row
+  /*Selects a specific row element (not yet defined)*/
+  var calendarRow = event.currentTarget;
+  /*Selects "id" element to dictate what day the event handler applies to (i.e., which row)*/
+  var dayId = calendarRow.getAttribute("id");
+  /*Selects the associated button for a given calendar row*/
   var saveButton = $(calendarRow).find("button");
-  //Selects the associated text area for a given calendar row
+  /*Selects the associated text area for a given calendar row*/
   var textArea = $(calendarRow).find("textarea");
   var taskText = textArea.val().trim();
   if (saveButton.is(event.target)) {
-    //Save text to localStorage by row (hourId)
-    localStorage.setItem(hourId, taskText);
+    /*Save text to localStorage by row (dayId)*/
+    localStorage.setItem(dayId, taskText);
   }
 }
