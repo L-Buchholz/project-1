@@ -20,14 +20,14 @@
   flex: 1 0 50%;
 }
 .side-block {
-  border:  rgba(0,0,0,.125) solid 1px;
+  border: rgba(0, 0, 0, 0.125) solid 1px;
 }
 .side-block-right {
   height: 76vh;
   width: 24vw;
   margin-left: 2px;
   box-shadow: 8px 8px 8px #888888;
-  flex: 1 0 24% ;
+  flex: 1 0 24%;
 }
 .side-block-left {
   height: 76vh;
@@ -39,4 +39,9 @@
 
 .side-block h4 {
   text-align: center;
+}
+
+.logo {
+  max-width: 15%;
+  max-height: 15%;
 }
