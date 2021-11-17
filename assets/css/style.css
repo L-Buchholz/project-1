@@ -96,18 +96,21 @@ textarea {
 .past {
   background-color: #d3d3d3;
   color: white;
+  border-radius: 0 15px 15px 0;
 }
 
 /*For the calendar div*/
 .present {
   background-color: #0b9aff;
   color: white;
+  border-radius: 0 15px 15px 0;
 }
 
 /*For the calendar div*/
 .future {
   background-color: #e8f5fe;
   color: white;
+  border-radius: 0 15px 15px 0;
 }
 
 /*For the calendar div*/
