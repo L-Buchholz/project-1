@@ -1,9 +1,6 @@
 //CALENDAR JAVASCRIPT
 //Variables
 
-var requesturl = "https://date.nager.at/api/v3/PublicHolidays/2017/US";
-console.log(requesturl);
-
 var today = moment();
 var dayWeek = today.format("dddd");
 var monthDay = today.format("MMM Do");
@@ -13,6 +10,37 @@ $("#currentDay").text("Today is " + dayWeek + ", " + monthDay);
 var day = today.day();
 
 //FUNCTIONS
+
+var holidays = function () {
+  var requestUrl =
+    "https://calendarific.com/api/v2/holidays?&api_key=430d5f859bcdbc7032378fb6997905cdc22686c1&country=US&year=2021&type=national";
+  fetch(requestUrl)
+    /*Collects data from URL*/
+    .then(function (response) {
+      return response.json();
+    })
+    /*Returns collected data (if response is received) as an object*/
+    .then(function (data) {
+      console.log(data);
+
+      let date = data.response.holidays[0].date.iso;
+      console.log(date);
+
+      for (var i = 0; i < data.response.holidays.length; i++) {
+        var today1 = moment().format("YYYY-MM-DD");
+        console.log(today1);
+
+        if (today1 === date) {
+          //console.log("This is a holiday!")
+          $(textArea).val("Public holiday");
+        } else {
+          //console.log("Not a holiday");
+          $(textArea).val("Not a holiday");
+        }
+      }
+    });
+};
+holidays();
 
 /*Body header: Sets dates for the current week AND current date, 
 both incorporating days of the week*/
@@ -34,7 +62,6 @@ for (var calendarDay = 1; calendarDay < 8; calendarDay++) {
   } else {
     currentDay.addClass("future");
   }
-
   /*Saves user-generated text to calendar text areas 
   (here calendarDay points at the value stored by dayId, 
   which is defined below)*/
