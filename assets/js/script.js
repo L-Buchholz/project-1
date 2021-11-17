@@ -8,9 +8,37 @@ $("#currentDay").text("Today is " + dayWeek + ", " + monthDay);
 //Establishes current day
 var day = today.day();
 //var hour = moment().hour();
-console.log(currentDay);
 
 //FUNCTIONS
+
+var holidays = function () {
+  var requestUrl =
+    "https://calendarific.com/api/v2/holidays?&api_key=430d5f859bcdbc7032378fb6997905cdc22686c1&country=US&year=2021&type=national";
+  fetch(requestUrl)
+    /*Collects data from URL*/
+    .then(function (response) {
+      return response.json();
+    })
+    /*Returns collected data (if response is received) as an object*/
+    .then(function (data) {
+      console.log(data);
+
+      let date = data.response.holidays[0].date.iso;
+      console.log(date);
+
+      for (var i = 0; i < data.response.holidays.length; i++) {
+        var today1 = moment().format("YYYY-MM-DD");
+        console.log(today1);
+
+        if (today1 === date) {
+          console.log("This matches!");
+        } else {
+          console.log("why you not here?");
+        }
+      }
+    });
+};
+holidays();
 
 //$("#currentWeek").text("Week of " + )
 
