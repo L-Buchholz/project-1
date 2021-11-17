@@ -23,15 +23,11 @@
   border: rgba(0, 0, 0, 0.125) solid 1px;
 }
 .side-block-right {
-  height: 76vh;
-  width: 24vw;
   margin-left: 2px;
   box-shadow: 8px 8px 8px #888888;
   flex: 1 0 24%;
 }
 .side-block-left {
-  height: 76vh;
-  width: 24vw;
   margin-right: 2px;
   box-shadow: -8px 8px 8px #888888;
   flex: 1 0 24%;
@@ -39,6 +35,7 @@
 
 .side-block h4 {
   text-align: center;
+  text-decoration: underline;
 }
 
 .logo {
@@ -52,6 +49,22 @@
   right: 0px;
 }
 
+/* sets container for date in calendar */
+.dayContainer {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* set vertical text */
+.vText {
+  margin: 0;
+  padding: 0;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
 /*For the calendar div*/
 textarea {
   background: transparent;
@@ -59,11 +72,11 @@ textarea {
   resize: none;
   color: #000000;
   border-left: 1px solid black;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 /*For the calendar div*/
-.row {
+.calRow {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
@@ -83,28 +96,34 @@ textarea {
 .past {
   background-color: #d3d3d3;
   color: white;
+  border-radius: 0 15px 15px 0;
 }
 
 /*For the calendar div*/
 .present {
   background-color: #0b9aff;
   color: white;
+  border-radius: 0 15px 15px 0;
 }
 
 /*For the calendar div*/
 .future {
   background-color: #e8f5fe;
   color: white;
+  border-radius: 0 15px 15px 0;
 }
 
 /*For the calendar div*/
 .saveBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #e6d738;
+  background-color: #0b9aff;
   color: white;
-  padding-top: 15px;
+  /* padding-top: 15px; */
 }
 
 /*For the calendar div*/
