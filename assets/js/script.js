@@ -33,13 +33,13 @@ var holidays = function () {
         var textArea = $(".schedule").find("textarea");
 
         if (today1 === date) {
-          /*TO TEST THIS: Replace "today1" with a holiday in YYYY-MM-DD
-          format; i.e., "if ("2021-01-01" ==== date)" returns 
+          /*To test for holidays: Replace "today1" with a holiday in 
+          YYYY-MM-DD format; i.e., "if ("2021-01-01" ==== date)" returns 
           "Public holiday" on all lines*/
           $(textArea).val("Public holiday");
         } else {
-          //console.log("Not a holiday");
-          $(textArea).val("Not a holiday");
+          /*Tests code in dev -- not visible on page*/
+          console.log("Not a holiday");
         }
       }
     });
