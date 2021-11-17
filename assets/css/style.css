@@ -40,3 +40,8 @@
 .side-block h4 {
   text-align: center;
 }
+
+.logo {
+  max-width: 15%;
+  max-height: 15%;
+}
