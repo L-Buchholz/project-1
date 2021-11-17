@@ -45,3 +45,9 @@
   max-width: 15%;
   max-height: 15%;
 }
+
+#sign-up-btn {
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
