@@ -51,3 +51,64 @@
   top: 0;
   right: 0px;
 }
+
+/*For the calendar div*/
+textarea {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  border-left: 1px solid black;
+  padding: 10px;
+}
+
+/*For the calendar div*/
+.row {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  white-space: pre-wrap;
+  height: 100px;
+  border-top: 1px solid white;
+}
+
+/*For the calendar div*/
+.day {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
+
+/*For the calendar div*/
+.past {
+  background-color: #d3d3d3;
+  color: white;
+}
+
+/*For the calendar div*/
+.present {
+  background-color: #0b9aff;
+  color: white;
+}
+
+/*For the calendar div*/
+.future {
+  background-color: #e8f5fe;
+  color: white;
+}
+
+/*For the calendar div*/
+.saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #e6d738;
+  color: white;
+  padding-top: 15px;
+}
+
+/*For the calendar div*/
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
