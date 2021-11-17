@@ -52,6 +52,22 @@
   right: 0px;
 }
 
+/* sets container for date in calendar */
+.dayContainer {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* set vertical text */
+.vText {
+  margin: 0;
+  padding: 0;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
 /*For the calendar div*/
 textarea {
   background: transparent;
@@ -59,11 +75,11 @@ textarea {
   resize: none;
   color: #000000;
   border-left: 1px solid black;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 /*For the calendar div*/
-.row {
+.calRow {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
@@ -99,12 +115,15 @@ textarea {
 
 /*For the calendar div*/
 .saveBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #e6d738;
+  background-color: #0b9aff;
   color: white;
-  padding-top: 15px;
+  /* padding-top: 15px; */
 }
 
 /*For the calendar div*/
