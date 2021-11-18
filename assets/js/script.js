@@ -42,6 +42,30 @@ var holidays = function () {
 };
 holidays();
 
+
+var emailVarification = function () {
+  var email = 'ohall1223@gmail.com'
+  // document.querySelector("#sign-up-btn")
+  var pizzaAPI = `https://www.validator.pizza/email/${email}`
+ 
+  fetch(pizzaAPI)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data)
+     let emailStatus = data.status;
+    console.log(emailStatus)
+
+    if(emailStatus === 200){
+      console.log('Working')
+    } else {
+      console.log("Didn't work")
+    }
+  })
+}
+emailVarification();
+
 /*Body header: Sets dates for the current week AND current date, 
 both incorporating days of the week*/
 /*MomentJs: day(1) = Monday, day(7) = following Sunday (based on
