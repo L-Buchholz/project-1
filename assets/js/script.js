@@ -1,4 +1,4 @@
-//CALENDAR JAVASCRIPT
+///CALENDAR JAVASCRIPT
 //Variables
 
 var today = moment();
@@ -26,21 +26,49 @@ var holidays = function () {
       let date = data.response.holidays[0].date.iso;
       console.log(date);
 
+      /*Determines if current calendar week includes any holidays, by day*/
       for (var i = 0; i < data.response.holidays.length; i++) {
         var today1 = moment().format("YYYY-MM-DD");
-        console.log(today1);
+        /*Refers to each individual line (day)*/
+        var textArea = $(".schedule").find("textarea");
 
         if (today1 === date) {
-          //console.log("This is a holiday!")
+          /*To test for holidays: Replace "today1" with a holiday in 
+          YYYY-MM-DD format; i.e., "if ("2021-01-01" ==== date)" returns 
+          "Public holiday" on all lines*/
           $(textArea).val("Public holiday");
         } else {
-          //console.log("Not a holiday");
-          $(textArea).val("Not a holiday");
+          /*Tests code in dev -- not visible on page*/
+          console.log("Not a holiday");
         }
       }
     });
 };
 holidays();
+
+
+var emailVarification = function () {
+  var email = 'ohall1223@gmail.com'
+  // document.querySelector("#sign-up-btn")
+  var pizzaAPI = `https://www.validator.pizza/email/${email}`
+ 
+  fetch(pizzaAPI)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data)
+     let emailStatus = data.status;
+    console.log(emailStatus)
+
+    if(emailStatus === 200){
+      console.log('Working')
+    } else {
+      console.log("Didn't work")
+    }
+  })
+}
+emailVarification();
 
 /*Body header: Sets dates for the current week AND current date, 
 both incorporating days of the week*/
