@@ -100,7 +100,7 @@ function saveHandler(event) {
   /*Selects "id" element to dictate what day the event handler applies to (i.e., which row)*/
   var dayId = calendarRow.getAttribute("id");
   /*Selects the associated button for a given calendar row*/
-  var saveButton = $(calendarRow).find("button");
+  var saveButton = $(calendarRow).find("img");
   /*Selects the associated text area for a given calendar row*/
   var textArea = $(calendarRow).find("textarea");
   var taskText = textArea.val().trim();
