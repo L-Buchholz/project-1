@@ -87,6 +87,7 @@ textarea {
   color: #000000;
   border-left: 1px solid black;
   /* padding: 10px; */
+  float: left;
 }
 
 /*For the calendar div*/
@@ -144,4 +145,9 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.week-date-message {
+font-size: 16px;
+text-align: center;
 }
