@@ -67,29 +67,51 @@ var holidays = function () {
 };
 holidays();
 
-var emailVerification = function () {
-  var email = "ohall1223@gmail.com";
+var emailVarification = function () {
+  var email = document.querySelector("#userEmailInput").value
+  console.log(email)
   // document.querySelector("#sign-up-btn")
-  var pizzaAPI = `https://www.validator.pizza/email/${email}`;
-
+  var pizzaAPI = `https://www.validator.pizza/email/${email}`
+ 
   fetch(pizzaAPI)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
-      let emailStatus = data.status;
-      console.log(emailStatus);
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+     let emailStatus = data.status;
 
-      if (emailStatus === 200) {
-        console.log("Working");
-      } else {
-        console.log("Didn't work");
-      }
-    });
-};
-emailVerification();
+    if(emailStatus === 200){
+        const returnedData = JSON.parse(localStorage.getItem("data")) || [];
+        const userEmail = document.querySelector("#userEmailInput").value;
 
+        returnedData.push(userEmail);
+
+        localStorage.setItem("data", JSON.stringify(returnedData))
+
+        document.querySelector("#userEmailInput").value = "";
+
+      console.log('Working')
+
+      // trigger success modal
+
+      document.querySelector("#alertSuccess").removeAttribute("class", "hide")
+
+      $("#alertDanger").addClass("hide");
+      
+      $("#userInputForm").addClass("hide");
+
+      $("#sign-up-btn").attr("disabled", true);
+
+    } else {
+
+      console.log("Didn't work")
+
+      // trigger "please enter valid email" modal
+      document.querySelector("#alertDanger").removeAttribute("class", "hide")
+
+    }
+  })
+}
 //EVENT LISTENERS
 /*Enable "save" buttons to save items to localStorage)*/
 $(".row").on("click", saveHandler);
@@ -109,6 +131,16 @@ function saveHandler(event) {
     localStorage.setItem(dayId, taskText);
   }
 }
+
+document.querySelector("#emailButton").addEventListener("click", (event) => {
+    event.preventDefault()
+
+    console.log("Listening")
+
+    const userInput = document.querySelector("#userEmailInput").value;
+
+    emailVarification()
+})
 
 //todo/task functions
 var itemContainers = [].slice.call(
