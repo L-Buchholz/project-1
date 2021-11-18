@@ -1,4 +1,4 @@
-//CALENDAR JAVASCRIPT
+///CALENDAR JAVASCRIPT
 //Variables
 
 var today = moment();
@@ -26,16 +26,20 @@ var holidays = function () {
       let date = data.response.holidays[0].date.iso;
       console.log(date);
 
+      /*Determines if current calendar week includes any holidays, by day*/
       for (var i = 0; i < data.response.holidays.length; i++) {
         var today1 = moment().format("YYYY-MM-DD");
-        console.log(today1);
+        /*Refers to each individual line (day)*/
+        var textArea = $(".schedule").find("textarea");
 
         if (today1 === date) {
-          //console.log("This is a holiday!")
+          /*To test for holidays: Replace "today1" with a holiday in 
+          YYYY-MM-DD format; i.e., "if ("2021-01-01" ==== date)" returns 
+          "Public holiday" on all lines*/
           $(textArea).val("Public holiday");
         } else {
-          //console.log("Not a holiday");
-          $(textArea).val("Not a holiday");
+          /*Tests code in dev -- not visible on page*/
+          console.log("Not a holiday");
         }
       }
     });
