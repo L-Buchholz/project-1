@@ -46,28 +46,27 @@ var holidays = function () {
 };
 holidays();
 
-
 var emailVarification = function () {
-  var email = 'ohall1223@gmail.com'
+  var email = "ohall1223@gmail.com";
   // document.querySelector("#sign-up-btn")
-  var pizzaAPI = `https://www.validator.pizza/email/${email}`
- 
-  fetch(pizzaAPI)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data)
-     let emailStatus = data.status;
-    console.log(emailStatus)
+  var pizzaAPI = `https://www.validator.pizza/email/${email}`;
 
-    if(emailStatus === 200){
-      console.log('Working')
-    } else {
-      console.log("Didn't work")
-    }
-  })
-}
+  fetch(pizzaAPI)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      let emailStatus = data.status;
+      console.log(emailStatus);
+
+      if (emailStatus === 200) {
+        console.log("Working");
+      } else {
+        console.log("Didn't work");
+      }
+    });
+};
 emailVarification();
 
 /*Body header: Sets dates for the current week AND current date, 
@@ -117,3 +116,74 @@ function saveHandler(event) {
     localStorage.setItem(dayId, taskText);
   }
 }
+
+//todo/task functions
+var itemContainers = [].slice.call(
+  document.querySelectorAll(".board-column-content")
+);
+var columnGrids = [];
+var boardGrid;
+
+// Define the column grids so we can drag those
+// items around.
+itemContainers.forEach(function (container) {
+  // Instantiate column grid.
+  var grid = new Muuri(container, {
+    items: ".board-item",
+    layoutDuration: 400,
+    layoutEasing: "ease",
+    dragEnabled: true,
+    dragSort: function () {
+      return columnGrids;
+    },
+    dragSortInterval: 0,
+    dragContainer: document.body,
+    dragReleaseDuration: 400,
+    dragReleaseEasing: "ease",
+  })
+    .on("dragStart", function (item) {
+      // Let's set fixed widht/height to the dragged item
+      // so that it does not stretch unwillingly when
+      // it's appended to the document body for the
+      // duration of the drag.
+      item.getElement().style.width = item.getWidth() + "px";
+      item.getElement().style.height = item.getHeight() + "px";
+    })
+    .on("dragReleaseEnd", function (item) {
+      // Let's remove the fixed width/height from the
+      // dragged item now that it is back in a grid
+      // column and can freely adjust to it's
+      // surroundings.
+      item.getElement().style.width = "";
+      item.getElement().style.height = "";
+      // Just in case, let's refresh the dimensions of all items
+      // in case dragging the item caused some other items to
+      // be different size.
+      columnGrids.forEach(function (grid) {
+        grid.refreshItems();
+      });
+    })
+    .on("layoutStart", function () {
+      // Let's keep the board grid up to date with the
+      // dimensions changes of column grids.
+      boardGrid.refreshItems().layout();
+    });
+
+  // Add the column grid reference to the column grids
+  // array, so we can access it later on.
+  columnGrids.push(grid);
+});
+
+// Instantiate the board grid so we can drag those
+// columns around.
+boardGrid = new Muuri(".board", {
+  layoutDuration: 400,
+  layoutEasing: "ease",
+  dragEnabled: true,
+  dragSortInterval: 0,
+  dragStartPredicate: {
+    handle: ".board-column-header",
+  },
+  dragReleaseDuration: 400,
+  dragReleaseEasing: "ease",
+});
