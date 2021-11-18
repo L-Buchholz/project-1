@@ -19,17 +19,75 @@
   </head>
 
   <body>
-    <!-- <link href="pricing.css" rel="stylesheet" /> -->
-
     <div class="row py-3 no-gutters">
       <div>
         <button
           type="button"
           class="w-5 btn btn-sm btn-primary"
           id="sign-up-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
         >
-          Sign-up/Log-in
+          Sign-up
         </button>
+        <div
+          class="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                  Please enter your email to sign up
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form id="userInputForm">
+                  <input
+                    class="w-100"
+                    type="text"
+                    placeholder="email"
+                    id="userEmailInput"
+                  />
+                  <br />
+                  <input
+                    class="btn btn-primary w-100"
+                    type="submit"
+                    value="submit email"
+                    id="emailButton"
+                  />
+                </form>
+              </div>
+              <div class="modal-footer">
+                <div
+                  class="alert alert-success hide"
+                  role="alert"
+                  id="alertSuccess"
+                >
+                  Email submitted
+                </div>
+                <div
+                  class="alert alert-danger hide"
+                  role="alert"
+                  id="alertDanger"
+                >
+                  Please enter valid email
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <header>
         <div
