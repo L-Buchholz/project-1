@@ -56,9 +56,11 @@ var holidays = function () {
           var dayOfWeek = moment().day(calendarDay).format("YYYY-MM-DD");
           /*Refers to each individual line (calendarDay)
           To test this on non-holiday weeks: Change === to !== */
-          if (dayOfWeek === date && calendarDay !== day) {
+          if (dayOfWeek == date) {
             $(currentDay).find("textarea").attr("placeholder", "US holiday");
-            $(currentDay).addClass("holiday");
+            if (calendarDay !== day) {
+              $(currentDay).addClass("holiday");
+            }
           } else {
             /*Tests code in dev -- not visible on page (16 national holidays x 7 days)*/
             console.log("Not a holiday");
