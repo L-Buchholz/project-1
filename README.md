@@ -30,7 +30,7 @@ When a user starts or completes a task, it can be moved via drag-and-drop to the
 
 The following is a screenshot of uProjekt, highlighting the web page's appearance and functionality:
 
-![This is a screenshot of the website. It includes: a header with a logo and nav bar, including a sign-up button for email notifications (verified by a third-party API); cards for the "Custom", "Typical", and "Accelerated" project planning options; a customizable demo "Tasks" bar with moveable list items to indicate progress; an interactive demo calender for the current week where tasks can be entered by day, and where a third-party API provides public US holidays; and a footer with contact info.](LINKME)
+![This is a screenshot of the website. It includes: a header with a logo and nav bar, including a sign-up button for email notifications (verified by a third-party API); cards for the "Custom", "Typical", and "Accelerated" project planning options; a customizable demo "Tasks" bar with moveable list items to indicate progress; an interactive demo calender for the current week where tasks can be entered by day, and where a third-party API provides public US holidays; and a footer with contact info.](./assets/images/screenshot.png)
 
 ## uProjekt webpage
 
