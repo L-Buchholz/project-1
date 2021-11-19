@@ -157,7 +157,6 @@ textarea {
   height: 95.5%;
 }
 
-
 .board-column {
   width: 100%;
   background: #f0f0f0;
@@ -235,14 +234,6 @@ textarea {
   -webkit-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 600px) {
-  .board-item-content {
-    text-align: center;
-  }
-  .board-item-content span {
-    /* display: none; */
-  }
-}
 
 .hide {
   display: none;
@@ -250,13 +241,45 @@ textarea {
 
 #boardHeight {
   height: 95.5%;
-  
+}
+
+@media screen and (max-width: 991px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .center {
+    display: none;
   }
 
-@media (max-width: 481px ) {
-.flex-page {
-  flex-wrap: wrap;
-}
-}
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
+  .side-block-left {
+    width: 100vw;
+    border: none;
+    box-shadow: none;
+  }
+
+  .side-block-right {
+    width: 100vw;
+    border: none;
+    box-shadow: none;
+  }
+  div .col {
+    width: 100%;
+  }
+}
