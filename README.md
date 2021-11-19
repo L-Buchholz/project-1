@@ -11,22 +11,30 @@ The nav bar features placeholder tabs where users can access and manage their pr
 ## User Story
 
 ```md
-AS A programmer with upcoming projects
-I WANT an online program to manage them based on the timeframe it will take to complete each component (planning, coding, etc.)
-SO THAT I can deliver my finished projects on-time.
+Users can sign up by entering a valid email address (using the button at the top of the page), which is verified by a third-party API.
+
+Users can also demo the project management system by entering tasks into the calendar application on the right-hand side of the page (which is set to the current week and highlights related holidays, also through a third-party API).
+
+Tasks that are entered into the calendar populate in the “To-do” section of the demo task management bar on the left-hand side of the page.
+
+When a user starts or completes a task, it can be moved via drag-and-drop to the in-progress or completed task management sections.
 ```
 
 ## API's
 
 1. Validator.pizza -- This application verifies email addresses for user contact and accounts: https://www.validator.pizza/
 
-2. Non-working days -- This application incorporates non-working days (weekends, holidays, etc.) into scheduling: https://isdayoff.ru/ (NOTE: There is an English translation that we plan to use; otherwise we'll find a similar app)
+2. US national holidays -- This application incorporates all 16 US national holidays into scheduling: https://calendarific.com/
 
 ## uProjekt screenshot
 
 The following is a screenshot of uProjekt, highlighting the web page's appearance and functionality:
 
-![This is a screenshot of the website. It includes: a header with a logo and nav bar, including a sign-up button for email notifications (verified by a third-party API); cards for the "Custom", "Typical", and "Accelerated" project planning options; a customizable demo "Tasks" bar with moveable list items to indicate progress; an interactive demo calender for the current week where tasks can be entered by day, and where a third-party API provides public US holidays; and a footer with contact info.](LINKME)
+![This is a screenshot of the website. It includes: a header with a logo and nav bar, including a sign-up button for email notifications (verified by a third-party API); cards for the "Custom", "Typical", and "Accelerated" project planning options; a customizable demo "Tasks" bar with moveable list items to indicate progress; an interactive demo calender for the current week where tasks can be entered by day, and where a third-party API provides public US holidays; and a footer with contact info.](./assets/images/screenshot.png)
+
+## uProjekt webpage
+
+The final link to the deployed uProjekt page is here: https://l-buchholz.github.io/project-1/
 
 ## uProjekt development team members
 
