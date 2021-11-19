@@ -47,7 +47,9 @@ var holidays = function () {
         var textArea = $(currentDay).find("textarea");
         var savedValue = localStorage.getItem(calendarDay);
         $(textArea).val(savedValue);
-
+        /*Establishes task lists to coincide with calendar*/
+        var currentTask = $("#content-" + calendarDay);
+        $(currentTask).text(savedValue);
         /*Determines if current calendar week includes any holidays, by day*/
         for (var i = 0; i < data.response.holidays.length; i++) {
           var date = data.response.holidays[i].date.iso;
