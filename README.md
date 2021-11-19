@@ -30,7 +30,7 @@ The following is a screenshot of uProjekt, highlighting the web page's appearanc
 
 ## uProjekt development team members
 
-- Aaron Farr
+- Aaron Farrell
 - Collin Kerr
 - Lauren Buchholz
 - Moe Essmat
