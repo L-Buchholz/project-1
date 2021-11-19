@@ -68,50 +68,49 @@ var holidays = function () {
 holidays();
 
 var emailVarification = function () {
-  var email = document.querySelector("#userEmailInput").value
-  console.log(email)
+  var email = document.querySelector("#userEmailInput").value;
+  console.log(email);
   // document.querySelector("#sign-up-btn")
-  var pizzaAPI = `https://www.validator.pizza/email/${email}`
- 
-  fetch(pizzaAPI)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-     let emailStatus = data.status;
+  var pizzaAPI = `https://www.validator.pizza/email/${email}`;
 
-    if(emailStatus === 200){
+  fetch(pizzaAPI)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      let emailStatus = data.status;
+
+      if (emailStatus === 200) {
         const returnedData = JSON.parse(localStorage.getItem("data")) || [];
         const userEmail = document.querySelector("#userEmailInput").value;
 
         returnedData.push(userEmail);
 
-        localStorage.setItem("data", JSON.stringify(returnedData))
+        localStorage.setItem("data", JSON.stringify(returnedData));
 
         document.querySelector("#userEmailInput").value = "";
 
-      console.log('Working')
+        console.log("Working");
 
-      // trigger success modal
+        // trigger success modal
 
-      document.querySelector("#alertSuccess").removeAttribute("class", "hide")
+        document
+          .querySelector("#alertSuccess")
+          .removeAttribute("class", "hide");
 
-      $("#alertDanger").addClass("hide");
-      
-      $("#userInputForm").addClass("hide");
+        $("#alertDanger").addClass("hide");
 
-      $("#sign-up-btn").attr("disabled", true);
+        $("#userInputForm").addClass("hide");
 
-    } else {
+        $("#sign-up-btn").attr("disabled", true);
+      } else {
+        console.log("Didn't work");
 
-      console.log("Didn't work")
-
-      // trigger "please enter valid email" modal
-      document.querySelector("#alertDanger").removeAttribute("class", "hide")
-
-    }
-  })
-}
+        // trigger "please enter valid email" modal
+        document.querySelector("#alertDanger").removeAttribute("class", "hide");
+      }
+    });
+};
 //EVENT LISTENERS
 /*Enable "save" buttons to save items to localStorage)*/
 $(".row").on("click", saveHandler);
@@ -133,14 +132,14 @@ function saveHandler(event) {
 }
 
 document.querySelector("#emailButton").addEventListener("click", (event) => {
-    event.preventDefault()
+  event.preventDefault();
 
-    console.log("Listening")
+  console.log("Listening");
 
-    const userInput = document.querySelector("#userEmailInput").value;
+  const userInput = document.querySelector("#userEmailInput").value;
 
-    emailVarification()
-})
+  emailVarification();
+});
 
 //todo/task functions
 var itemContainers = [].slice.call(

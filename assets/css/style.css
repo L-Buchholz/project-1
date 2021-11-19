@@ -53,8 +53,8 @@
 }
 
 .logo {
-  max-width: 15%;
-  max-height: 15%;
+  max-width: 10%;
+  max-height: 10%;
 }
 
 #sign-up-btn {
@@ -64,6 +64,14 @@
 }
 
 /* sets container for date in calendar */
+#currentWeek {
+  color: #ec1212;
+  font-size: 17px;
+}
+#currentDay {
+  color: #1e3bfb;
+  font-size: 22px;
+}
 .dayContainer {
   padding: 0;
   display: flex;
@@ -76,7 +84,7 @@
   margin: 0;
   padding: 0;
   writing-mode: vertical-rl;
-  text-orientation: upright;
+  text-orientation: sideways;
 }
 
 /*For the calendar div*/
@@ -153,18 +161,19 @@ textarea {
 }
 
 .board {
-  display: flex;
-  flex-direction: column;
+  background: #2c7cbc;
+  display: inline-block;
+  padding: 12px;
+  border-radius: 3px;
+  width: 370px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  min-height: 600px;
 }
 .board-column {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 20%;
-  margin: 0 1.5%;
+  width: 100%;
   background: #f0f0f0;
-  border-radius: 3px;
-  z-index: 1;
+  padding-top: 0pt;
 }
 .board-column.muuri-item-releasing {
   z-index: 2;
@@ -190,7 +199,7 @@ textarea {
   }
 }
 .board-column.todo .board-column-header {
-  background: #4a9ff9;
+  background: #ec5979;
 }
 .board-column.working .board-column-header {
   background: #f9944a;
