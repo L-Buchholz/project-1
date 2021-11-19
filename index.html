@@ -88,12 +88,11 @@
         </div>
       </div>
       <header
-        style="background-color: rgba(22, 74, 230, 0.503); font-size: large"
       >
         <div
           class="
             d-flex
-            flex-column flex-md-row
+            flex-sm-column flex-md-row
             align-items-center
             pb-6
             mb-4
@@ -124,45 +123,26 @@
         </div>
       </header>
 
-      <main class="d-flex">
+      <main class="d-flex flex-page">
         <section
-          class="side-block-left flex-column flex-start side-block rounded-3"
+          class="side-block-left flex-column flex-start side-block rounded-3 col-12"
         >
           <h4>Tasks</h4>
 
-          <div class="board">
+          <div class="board" id="boardHeight">
             <div class="board-column todo">
               <div class="board-column-header">To do</div>
               <div class="board-column-content-wrapper">
                 <div class="board-column-content">
                   <div class="board-item">
-                    <div class="board-item-content" id="content-1">
-                      <span></span>
-                    </div>
+                    <div class="board-item-content"><span>Item #</span>1</div>
+                  </div>
                   <div class="board-item">
-                   <div class="board-item-content" id="content-2">
-                      <span></span>
-                    </div>
+                    <div class="board-item-content"><span>Item #</span>2</div>
+                  </div>
                   <div class="board-item">
-                   <div class="board-item-content" id="content-3">
-                      <span></span>
-                    </div>>
-                    <div class="board-item">
-                   <div class="board-item-content" id="content-4">
-                      <span></span>
-                    </div>>
-                    <div class="board-item">
-                   <div class="board-item-content" id="content-5">
-                      <span></span>
-                    </div>>
-                    <div class="board-item">
-                   <div class="board-item-content" id="content-6">
-                      <span></span>
-                    </div>>
-                    <div class="board-item">
-                   <div class="board-item-content" id="content-7">
-                      <span></span>
-                    </div>>
+                    <div class="board-item-content"><span>Item #</span>3</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -386,7 +366,7 @@
       </main>
 
       <footer
-        style="background-color: rgba(22, 74, 230, 0.503); font-size: large"
+        style="font-size: large"
         class="pt-4 my-md-5 pt-md-5 border-top"
       >
         <div class="row">
@@ -484,3 +464,4 @@
     <script type="text/javascript" src="./assets/js/script.js"></script>
   </body>
 </html>
+
