@@ -2,9 +2,11 @@
 
 ## Project Description
 
-A programmer requires a responsive planner for scheduling timeframes to complete a project. The planner will be allocated based on the project's deadline, with "Typical", "Accelerated", and "Custom" options available.
+Programmers require a responsive online planner for scheduling timeframes to complete their projects: uProjekt. The planner will be allocated based on a project's deadline, with "Typical", "Accelerated", and "Custom" options available. Currently these features are in a placeholder stage.
 
-The planner will use MomentJS or a similar library to incorporate date and time.
+In order to showcase the functionality of the project planner, the right side of the uProjekt home page has a demo calendar (featuring the current week and any associated US national holidays through a third-party API) with interactive task entry panels. The left side of the home page hosts a connected interactive task bar where tasks can be assigned to different categories depending on whether they need to be completed, are pending, or are finished.
+
+The nav bar features placeholder tabs where users can access and manage their projects and contact the uProjekt team. The sign-up tab at the top registers visitors by email address and verifies the validity of these addresses through a third-party API.
 
 ## User Story
 
@@ -20,20 +22,16 @@ SO THAT I can deliver my finished projects on-time.
 
 2. Non-working days -- This application incorporates non-working days (weekends, holidays, etc.) into scheduling: https://isdayoff.ru/ (NOTE: There is an English translation that we plan to use; otherwise we'll find a similar app)
 
-## Project Calendar wireframe
+## uProjekt screenshot
 
-The following is a screenshot of the wireframe, highlighting the website's proposed appearance and functionality:
+The following is a screenshot of uProjekt, highlighting the web page's appearance and functionality:
 
-![This is an image based on the proposed website. It includes: a header and nav bar; a website background image/logo/icon; cards for the designated project planners; and a footer with contact info. Courtesy of Collin Kerr](./assets/images/Wireframe1-UProjekt.jpg)
+![This is a screenshot of the website. It includes: a header with a logo and nav bar, including a sign-up button for email notifications (verified by a third-party API); cards for the "Custom", "Typical", and "Accelerated" project planning options; a customizable demo "Tasks" bar with moveable list items to indicate progress; an interactive demo calender for the current week where tasks can be entered by day, and where a third-party API provides public US holidays; and a footer with contact info.](LINKME)
 
-## (Rough) breakdown of tasks:
+## uProjekt development team members
 
-- Aaron:
-
-- Collin: Awesome mock-up
-
-- Moe:
-
-- Lauren: Project proposal and Git repo coordinator
-
-- Olivia: (TBD on return to class 11/16)
+- Aaron Farrell
+- Collin Kerr
+- Lauren Buchholz
+- Moe Essmat
+- Olivia Hall
