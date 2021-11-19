@@ -123,6 +123,13 @@ textarea {
 }
 
 /*For the calendar div*/
+.holiday {
+  background-color: #69e097;
+  color: white;
+  border-radius: 0 15px 15px 0;
+}
+
+/*For the calendar div*/
 .saveBtn {
   display: flex;
   justify-content: center;
