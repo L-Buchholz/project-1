@@ -1,17 +1,3 @@
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
-
 * {
   box-sizing: 20px;
   padding: 0;
@@ -161,15 +147,17 @@ textarea {
 }
 
 .board {
-  background: #2c7cbc;
+  background: #0b9aff;
   display: inline-block;
   padding: 12px;
   border-radius: 3px;
-  width: 370px;
+  width: 100%;
   white-space: nowrap;
   overflow-x: scroll;
-  min-height: 600px;
+  height: 95.5%;
 }
+
+
 .board-column {
   width: 100%;
   background: #f0f0f0;
@@ -195,17 +183,17 @@ textarea {
 }
 @media (max-width: 600px) {
   .board-column-header {
-    text-indent: -1000px;
+    /* text-indent: -1000px; */
   }
 }
 .board-column.todo .board-column-header {
-  background: #ec5979;
+  background: #f78f8f;
 }
 .board-column.working .board-column-header {
-  background: #f9944a;
+  background: #ffc49c;
 }
 .board-column.done .board-column-header {
-  background: #2ac06d;
+  background: #bae0bd;
 }
 /* This is the secret sauce,
    always use a wrapper for setting
@@ -252,10 +240,23 @@ textarea {
     text-align: center;
   }
   .board-item-content span {
-    display: none;
+    /* display: none; */
   }
 }
 
 .hide {
   display: none;
 }
+
+#boardHeight {
+  height: 95.5%;
+  
+  }
+
+@media (max-width: 481px ) {
+.flex-page {
+  flex-wrap: wrap;
+}
+}
+
+
