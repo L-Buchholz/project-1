@@ -23,7 +23,7 @@ $("#currentWeek").text(
 
 var holidays = function () {
   var requestUrl =
-    "https://calendarific.com/api/v2/holidays?&api_key=430d5f859bcdbc7032378fb6997905cdc22686c1&country=US&year=2021&type=national";
+    "https://calendarific.com/api/v2/holidays?&api_key=6417fc0af40f97c19b8c3e497648a76d87206694&country=US&year=2021&type=national";
   fetch(requestUrl)
     /*Collects data from URL*/
     .then(function (response) {
