@@ -24,7 +24,7 @@ When a user starts or completes a task, it can be moved via drag-and-drop to the
 
 1. Validator.pizza -- This application verifies email addresses for user contact and accounts: https://www.validator.pizza/
 
-2. US national holidays -- This application incorporates all 16 US national holidays into scheduling: https://calendarific.com/
+2. US national holidays -- This application incorporates all 16 US national holidays into scheduling: https://calendarific.com/ _(NOTE: The paid subscription for public hosting of this API is no longer valid as of Feb. 2021)_
 
 ## uProjekt screenshot
 
